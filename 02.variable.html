@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hoisting 提升
+        // var x
+        let x = 20
+
+        // const x = 30
+        // const 之後就不能改，但 let / var 可以
+        console.log('start');
+        console.log(x);
+        console.log('end');
+
+        // 不用再寫一次let / var，不然會重複宣告
+        x = 30
+
+        // var x = 10
+        console.log(x);
+
+    </script>
+</body>
+</html>

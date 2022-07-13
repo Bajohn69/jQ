@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- <script>
+        $(document).ready(function() { 
+            $('h1').css('color','red')
+            $('h1').css('font-size','5rem')
+    // Do something when .ready() called. 
+    // 這是舊的寫法
+        }); 
+
+    </script> -->
+
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h2 id="mybox" class="box">box</h2>
+
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script> 
+        // 變數 variable
+        var weekday = 'Wednesday'
+
+        $('h1').css('color','blue')
+        $('#mybox').css('color','red')
+        $('.box').css('color','yellow')
+        // $('h1').text('it\' sunday')
+        
+        // es6 模板字串
+        $('h1').text(`it's ${weekday} today.`)
+
+    </script> 
+</body>
+</html>
