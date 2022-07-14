@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <span>span</span>
+            <div class="col">col1</div>
+            <span>span</span>
+            <div class="col">col2</div>
+            <div class="col">col3</div>
+            <div class="col">col4</div>
+            <div class="col">col5</div>
+            <div class="col">col6</div>
+        </div>
+        <div class="row">
+            <span>span</span>
+            <div class="col">col1</div>
+            <span>span</span>
+            <div class="col">col2</div>
+            <div class="col">col3</div>
+            <div class="col">col4</div>
+            <div class="col">col5</div>
+            <div class="col">col6</div>
+        </div>
+        <div class="row">
+            <span>span2</span>
+            <div class="col">col1</div>
+        </div>
+
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.col:first-child').css('background','lightblue');
+        // 上面這樣會選不到，因為 col 不是在最前面
+        $('.col:first-of-type').css('background','lightblue');
+        // 這樣是選 col 家族的第一個
+        $('span:first-of-type').css('background','lightgreen');
+        // 這樣是選 span 家族的第一個
+        $('.col:eq(5)').css('background','lightpink');
+        // 全部人的第五
+        $('.col:nth-child(5)').css('background','hotpink');
+        // 所有家族的第五都要出來
+        $('span:only-of-type').css('background','hotpink');
+
+
+
+    </script>      
+</body>
+</html>

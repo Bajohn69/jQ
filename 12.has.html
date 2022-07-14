@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <div class="a1">A1</div>
+    </div>
+    <div>
+        <div class="a2">A2</div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('div').has('.a1').css('background', 'lightblue');
+        // 不是第二個 div 他只是帶有 a1 標籤的 div ! important⬅⬅⬅⬅⬅
+        // 第一個 div 才是擁有 a1 "內容"的div
+    </script>
+</body>
+
+</html>
