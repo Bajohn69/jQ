@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <ul class="level-1">
+        <li class="item1">item1</li>
+        <li class="item2">item2
+            <ul class="level-02">
+                <li class="item01">item01</li>
+                <li class="item02">item02
+                    <ul class="level-003">
+                        <li class="item001">item001</li>
+                        <li class="item002">item002
+                            <ul class="level-0004">
+                                <li class="item0001">item0001</li>
+                                <li class="item0002">item0002</li>
+                                <li class="item0003">item0003</li>
+                            </ul>
+                        </li>
+                        <li class="item003">item003</li>
+                    </ul>
+                </li>
+                <li class="item03">item03</li>
+            </ul>
+        </li>
+        <li class="item3">item3</li>
+    </ul>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.level-1').find('.item01').css('background','lightblue');
+        $('.level-1').children('.item1').css('background','pink');
+        // children 只能往下找一層
+        $('.item003').closest('.item2').css('background','lightgreen');
+        $('.item0003').parent('.level-0004').css('background','tomato');
+        // parent 只能往上找一層
+        // $('.item0003').parents().css('background','tomato');
+        // parents 往上找全部
+        $('.item0003').parentsUntil('.item02').css('background','green');
+        // .parentsUntil 往上找到某地方停止
+        $('.item0002').next().css('background','blue');
+        $('.item0002').prev().css('background','white');
+        // 往旁邊找
+        $('.item001').nextAll().css('background','purple');
+        $('.item03').prevAll().css('background','violet');
+        
+        $('.item0002').closest('.item02').find('li').parent().css('background','orange');
+
+    </script>      
+</body>
+</html>

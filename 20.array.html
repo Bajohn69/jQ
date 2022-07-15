@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        const myArray = ['product01.jpg','product02.jpg','product03.jpg','product04.jpg','product05.jpg']
+        console.log('myArray:' , myArray[2]);
+        // 拿陣列中的第幾個 (從 0 開始)
+
+        const myArray2 = ['a','b','c',1,3,9, true, false]
+        console.log('myArray2:' , myArray2[2]);
+
+        const config0 = '';
+        const config1 = 'username';
+        const config2 = 'birth';
+        
+        const isConfig0 = config0 || 'no config0'
+        console.log('isConfig0:', isConfig0);
+        // && 只有拿來判斷 || 可以拿來給值(沒有值嗎? 我給你^_^)
+
+        const userList = [
+            {id:1, username:'Alex', tel:'0912345678', birth:'01/01'},
+            {id:2, username:'Bill', tel:'0987654321', birth:'12/31'}
+        ];
+
+        const userList2 = [
+            {id:1, username:'Alex', tel:'0912345678', birth:'1/1'}, 
+            {id:2, username:'Bill', birth:'12/31', tel:'0987654321'}
+        ]
+        console.log('user:', userList[0].birth);
+        // 點表示法(常用但不能放變數)
+        console.log('user:', userList[0][config1]);
+        // 中括號表示法只有中間放變數的時候會用到
+
+        // if (userList[0][config1] == 'Alex') {
+        //     document.write('yes')            
+        // }
+        
+        if (userList[0][config1] == 'Bill') {
+            document.write('yes')         
+        }
+        else{
+            document.write("you're not Alex ")         
+        }
+
+        if (userList[0][config1] == 'Alex' && userList[0][config2] == '01/01') {
+            document.write('讚喔 ')         
+        }
+        // && AND
+
+        if (userList[0][config1] == 'Bill' || userList[0][config2] == '01/01') {
+            document.write('不讚')         
+        }
+        // || OR
+
+    </script>      
+</body>
+</html>
