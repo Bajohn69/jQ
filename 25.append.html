@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <button>Add</button>
+    <div class="container">
+        <div class="row">
+            <!-- before 加在這裡 -->
+            <ul>
+                <!-- prepend 加在這裡 -->
+                <li>item1</li>
+                <li>item2</li>
+                <!-- append 加在這裡 -->
+            </ul>
+            <!-- after 加在這裡 -->
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        let nowIndex = 3
+
+        $('button').click(function(){
+            console.log('hi')
+            $('ul').append('<li>item' + nowIndex + '</li>')
+            // 我希望 nowIndex 在每次點擊後，把自己的數字 +1
+            nowIndex = nowIndex + 1
+        })
+
+
+    </script>      
+</body>
+</html>

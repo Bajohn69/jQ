@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
+
 <body>
     <img src="./imgs/product1.jpg" alt="">
     <script src="./js/jquery-3.6.0.min.js"></script>
@@ -14,9 +17,32 @@
         const imgSrc = $('img').attr('src')
         console.log('imgSrc:', imgSrc);
 
-        $('img').attr('src','./imgs/product2.jpg')
+        // $('img').attr('src','./imgs/product2.jpg').attr('alt','Hi alt')
+
+        // 上面那串可以改寫成下面
+
+        $('img').attr({
+            src: './imgs/product3.jpg',
+            alt: 'My alt',
+        })
+
+        // 規格表:
+        // [功能1] 點擊小圖，大圖要換成小圖的圖片
+        // 1.時機點: 點擊小圖的時候 (事件)
+        // 2.誰要換圖片? 大圖
+        // 3.換成甚麼圖片? 誰被點，就換誰的圖片(抽象)
+        // 4.我怎麼知道誰被點? 事件會告訴你答案
+
+        // 1.用事件來代表要執行的時間點:
+        $('.img-wrap > img').click(function () {
+            // 先實驗換圖片的功能是否能實現。
+            // 主詞(大圖):我想改變圖片的那個人是誰?能在這裡得到他嗎?
+            $('.img-demo img').attr('src', './imgs/product5.jpg');
+
+        })
 
 
-    </script>      
+    </script>
 </body>
+
 </html>

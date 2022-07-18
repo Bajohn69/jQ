@@ -16,6 +16,25 @@
     <h1 class="sample">Hello <span>World!</span></h1>
     <h1 class="result"></h1>
 
+    <form action="">
+        <button id="Autofill" type="button">
+            <!-- button 的 type="button" 才不會一直重新載入 -->
+            Autofill
+        </button>
+        <label for="username">username</label>
+        <input type="text" name="" id="username" value="123">
+    </form>
+
+
+    <form action="">
+        
+        <label for="password">password</label>
+        <input type="password" name="" id="password" placeholder="請填入密碼">
+        <button id="eye" type="button">
+            eye
+        </button>
+    </form>
+
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
         console.log('sample html:' , $('.sample').html());
@@ -30,7 +49,24 @@
         $('.result').text(h1text)
 
 
-        $('').css('background','lightblue');
+        // $('button').click(function (event) {
+        //     $('input').val('John')
+        // })
+        // 自動填入John
+
+
+        $('#eye').click(function () {
+            
+            if($('#password').attr('type') == 'password'){
+                $('#password').attr('type','text');
+            }else{
+                $('#password').attr('type','password');
+            }
+            
+        })
+        // 按眼睛看不看得到密碼
+
+
     </script>      
 </body>
 </html>
