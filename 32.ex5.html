@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                     </td>
                     <td>Elon Musk</td>
                     <td>09123456789</td>
@@ -51,8 +51,14 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
         $('input[type="checkbox"]').click(function(){
-            console.log('hi',$(this));
+            if($(this) == 'checked'){
+                $('tr').has(this).css('background','white')
+            }else{
+                $('tr').has(this).css('background','lightblue')
+            }
         })
+
+
     </script>
 </body>
 </html>
