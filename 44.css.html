@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            transition: .5s;
+            background-color: #faf;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.box').click(function (){
+            $(this).css('width', '+=100')
+            // 越來越寬
+            // $(this).css('width', '-=10')
+            // 越來越窄
+
+        })
+
+        // 點一下就變顏色，再點就改回來
+        // $('.box').click(function () {
+
+        //     console.log($(this).css('background-color'));
+        //     const boxBG = $(this).css('background-color');
+
+
+        //     // if (boxBG == 'rgb(255, 170, 255)'){
+        //     //     console.log('if');
+        //     //     $(this).css('background', '#aaf').css('width','800px')
+        //     // }else{
+        //     //     console.log('else');
+        //     //     $(this).css('background', '#faf').css('width','500px')
+        //     // }
+
+
+        //     // 可以直接宣告整個樣式，可用在夜間 / 日間模式
+        //     var style = {
+        //         backgroundColor: '#faf',
+        //         color: '#aaf'
+        //     }
+
+
+        //     if (boxBG == 'rgb(255, 170, 255)'){
+        //         console.log('if');
+        //         $(this).css({
+        //             backgroundColor: 'gray',
+        //             width: '800px'
+        //         })
+        //     }else{
+        //         console.log('else');
+        //         $(this).css('background', '#faf').css({
+        //             backgroundColor: '#faf',
+        //             width: '500px'
+        //         })
+        //     }
+        // })
+    </script>      
+</body>
+</html>

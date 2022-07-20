@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <button id="sayHi">sayHi</button>
+    <button id="on">on</button>
+    <button id="off">off</button>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        const sayHi = function () {
+                console.log('hi');
+            }
+        // 一定要宣告電腦才知道是同一人
+        
+        // $('#on').click(function () {
+        //     console.log('on');
+        //     $('#sayHi').on('click',function () {
+        //         console.log('hi');
+        //     })
+        // })
+
+        // $('#off').click(function () {
+        //     console.log('off');
+        //     $('#sayHi').off('click',function () {
+        //         console.log('hi');
+        //     })
+        // })
+
+        $('#on').click(function () {
+            console.log('on');
+            $('#sayHi').on('click',sayHi)
+        })
+
+
+        $('#off').click(function () {
+            console.log('off');
+            $('#sayHi').off('click',sayHi)
+        })
+
+        
+    </script>      
+</body>
+</html>

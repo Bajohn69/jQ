@@ -29,22 +29,7 @@
         ul.train li img{
             width: 100%;
         }
-        /* .wrap{
-            width: 800px;
-            height: 400px;
-            overflow: hidden;
-            border: 2px solid sienna;
-
-        }
-        ul.train{
-            width: 500%;
-        }
-        li{
-            width: 800px;
-        }
-        li img{
-            width: 100%;
-        } */
+        
 
     </style>
 </head>
@@ -60,7 +45,7 @@
     </div>
     <div class="wrap">
         <ul class="train list-unstyled d-flex">
-            <li>
+            <!-- <li>
                 <img src="./imgs/slide1.jpg" alt="">
             </li>
             <li>
@@ -74,30 +59,18 @@
             </li>
             <li>
                 <img src="./imgs/slide5.jpg" alt="">
-            </li>
+            </li> -->
         </ul>
     </div>
-    <!-- <div class="wrap">
-        <ul class="list-unstyled train d-flex">
-            <li class="">
-                <img class="" src="./imgs/slide1.jpg" alt="">
-            </li>
-            <li class="">
-                <img class="w-100" src="./imgs/slide2.jpg" alt="">
-            </li>
-            <li class="">
-                <img class="w-100" src="./imgs/slide3.jpg" alt="">
-            </li>
-            <li class="">
-                <img class="w-100" src="./imgs/slide4.jpg" alt="">
-            </li>
-            <li class="">
-                <img class="w-100" src="./imgs/slide5.jpg" alt="">
-            </li>
-        </ul>
-    </div> -->
+    
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
+        // 學 PHP 後的寫法
+        const sliderImgArray = ['slide1.jpg','slide2.jpg','slide3.jpg','slide4.jpg','slide5.jpg',]
+        $(sliderImgArray).each(function(index,item){
+                $('ul.train').append(`<li><img src="./imgs/${item}"></li>`)
+        })
+
         let nowPage = 0;
 
         $('#next').click(function () {
