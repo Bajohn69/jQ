@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        section{
+            width: 50%;
+            height: 50vh;
+            border: 1px salmon solid;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <section id="section1">section1</section>
+    <section id="section2">section2</section>
+    <section id="section3">section3</section>
+    <section id="section4">section4</section>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('body').click(function () {
+            console.log('section1 offset',$('#section1').offset());
+            console.log('section1 offset-top',$('#section1').offset().top);
+            console.log('section2 offset',$('#section2').offset());
+            console.log('section2 offset-top',$('#section2').offset().top);
+            console.log('section3 offset',$('#section3').offset());
+            console.log('section3 offset-top',$('#section3').offset().top);
+        })
+        
+        $('#section3').offset({top:650,left:200})
+        
+        // offset 搭配 scroll 使用，取得 X&Y 座標
+        $(window).scroll(function () {
+            console.log('section3 offset-top:',$('#section3').offset().top);
+            console.log('scrollTop:',$(window).scrollTop());
+            console.log('new offset:',($('#section3').offset().top - $(window).height() * 1/2));
+
+            // 網頁滑到 section3 的一半的時候就變色
+            // 彈性調整，不管 section 在哪都可用
+            if($(window).scrollTop() >= ($('#section3').offset().top - $(window).height() * 1/2)){
+                $('#section3').css('background','orange')
+            }else{
+                $('#section3').css('background','none')
+
+            }
+        })
+    </script>      
+</body>
+</html>

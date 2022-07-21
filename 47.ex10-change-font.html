@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <style>
+            .active{
+                background-color: #0062cc;
+            }
+            .fontS{
+                font-size: 0.8rem;
+            }
+            .fontM{
+                font-size: 1rem;
+            }
+            .fontS{
+                font-size: 1.5rem;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="sm" type="button" class="btn btn-primary">sm</button>
+                <button id="md" type="button" class="btn btn-primary">md</button>
+                <button id="lg" type="button" class="btn btn-primary">lg</button>
+            </div>
+        </div>
+        <div class="row">
+            <h3>JQuery</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        var fontS = {
+            fontSize: '0.8rem',
+            // backgroundColor: '#0062cc'
+
+        }
+        var fontM = {
+            fontSize: '1rem'
+        }
+        var fontL = {
+            fontSize: '1.5rem'
+        }
+        $('#sm').click(function () {
+            $('p').css(fontS)
+            console.log($('p').css(fontS));
+        })
+        $('#md').click(function () {
+            $('p').css(fontM)
+            console.log($('p').css(fontM));
+        })
+        $('#lg').click(function () {
+            $('p').css(fontL)
+            console.log($('p').css(fontL));
+        })
+    </script>
+</body>
+
+</html>

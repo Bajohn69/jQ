@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            padding: 10px;
+            margin: 20px;
+            border: 10px salmon solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        console.log('width:',$('.box').width());
+        console.log('height:',$('.box').height());
+        console.log('innerWidth:',$('.box').innerWidth());
+        console.log('innerHeight:',$('.box').innerHeight());
+        // inner 是扣掉 padding
+        console.log('outerWidth:',$('.box').outerWidth());
+        console.log('outerHeight:',$('.box').outerHeight());
+        // true 是有加 margin 的
+        console.log('outerWidth(true):',$('.box').outerWidth(true));
+        console.log('innerHeight(true):',$('.box').outerHeight(true));
+    </script>      
+</body>
+</html>

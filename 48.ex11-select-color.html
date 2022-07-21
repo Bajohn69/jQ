@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .color-demo-area, .color-select-area{
+            background-color: #ccc;
+            height: 70vh;
+        }
+        .color1{
+            background-color: coral;
+        }
+        .color2{
+            background-color: rgb(173, 114, 255);
+        }
+        .color3{
+            background-color: rgb(255, 253, 132);
+        }
+        .color4{
+            background-color: rgb(98, 187, 255);
+        }
+        .color-selestor{
+            height: 15vh;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div id="demo" class="color-demo-area"></div>
+            </div>
+            <div class="col-6 ">
+                <div class="color-select-area d-flex">
+                    <div class="col-3">
+                        <div class="color-selestor color1"></div>
+                    </div>
+                    <div class="col-3">
+                        <div class="color-selestor color2"></div>
+                    </div>
+                    <div class="col-3">
+                        <div class="color-selestor color3"></div>
+                    </div>
+                    <div class="col-3">
+                        <div class="color-selestor color4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        var color1 = {
+            backgroundColor: 'coral'
+        }
+        var color2 = {
+            backgroundColor: 'rgb(173, 114, 255)'
+        }
+        var color3 = {
+            backgroundColor: 'rgb(255, 253, 132)'
+        }
+        var color4 = {
+            backgroundColor: 'rgb(98, 187, 255)'
+        }
+        $('.color1').click(function () {
+            $('#demo').css(color1)
+        })
+        $('.color2').click(function () {
+            $('#demo').css(color2)
+        })
+        $('.color3').click(function () {
+            $('#demo').css(color3)
+        })
+        $('.color4').click(function () {
+            $('#demo').css(color4)
+        })
+        
+    </script>      
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        .wrap{
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+            padding: 100px;
+            position: relative;
+            
+        }
+        .wrap-inner{
+            width: 400px;
+            height: 400px;
+            background-color: #faf;
+            /* position: relative; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-inner">
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // position relative 下在誰身上會影響 position
+        console.log('box position:',$('.box').position());
+    </script>      
+</body>
+</html>
