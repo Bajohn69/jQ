@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
             integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
             <style>
-                .col >img{
+                .col > img{
                     border-radius: 50%;
-                    /* border: 3px solid red; */
+                    border: 3px solid transparent;
                 }
             </style>
 </head>
@@ -26,9 +26,18 @@
     </div>
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script>
-            $('.col img').click(function () {
-                $('.col img').css('outline','blue 0px solid')
-                $(this).css('outline','red 3px solid')
+            // outline 不會擠出空間，有時候會壓到別人，慎用
+            // $('.col img').click(function () {
+            //     $('.col img').css('outline','white 0px solid')
+            //     $(this).css('outline','red 3px solid')
+            // })
+
+            // 老師的
+            // 因為 border 是從中間長，所以可以先在 css 把它設成透明
+            $('img').click(function () {
+                console.log($(this));
+                $(this).css('border','red 3px solid').parent().siblings().children().css('border','3px solid transparent');
+                
             })
 
             

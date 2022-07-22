@@ -36,14 +36,14 @@
         </div>
 
         <div class="row mx-auto mt-3">
-            <button class="btn up btn-primary">上</button>
+            <button id="up" class="btn up btn-primary">上</button>
         </div>
         <div class="row mx-auto mt-3">
             <button id="left" class="btn left btn-primary mr-4">左</button>
             <button id="right" class="btn right btn-primary ml-4">右</button>
         </div>
         <div class="row mx-auto mt-3">
-            <button class="btn down btn-primary">下</button>
+            <button id="down" class="btn down btn-primary">下</button>
         </div>
 
     </div>
@@ -65,6 +65,27 @@
             }
         })
 
+        $('#left').click(function (right) {
+            const left = parseInt($('.box').css('left'))
+            if (left > 0) {
+                $('.box').css('left', '-=100')
+            }
+        })
+
+        $('#down').click(function (down) {
+            const top = parseInt($('.box').css('top'));
+            if (top < ($('.wrap').height() - $('.box').height())) {
+                $('.box').css('top', '+=100')
+            }
+        })
+
+        $('#up').click(function (down) {
+            const top = parseInt($('.box').css('top'));
+            if (top > 0) {
+                $('.box').css('top', '-=100')
+            }
+        })
+
         $(document).keydown(function (e) {
             console.log('hi', e.keyCode);
             // keyCode 是鍵盤的序號
@@ -83,20 +104,22 @@
                 }
             }
 
-            if (e.keyCode == 38) {
+            if (e.keyCode == 40) {
                 const top = parseInt($('.box').css('top'));
-                if (top < ($('.wrap').height() - $('.box').height())) {
-                $('.box').css('top', '-=100')
-                }
+                if (top < ($('.wrap').height() - $('.box').height()))
+                $('.box').css('top', '+=100')
             }
 
-            if (e.keyCode == 40) {
-                $('.box').css('top', '+=100')
+            if (e.keyCode == 38) {
+                const top = parseInt($('.box').css('top'));
+                if (top > 0) {
+                $('.box').css('top', '-=100')
+                }
             }
         })
 
 
-
+        // ($('.wrap').height() - $('.box').height())
 
 
     </script>

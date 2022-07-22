@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <button>Click</button>
+    <h1>Hi</h1>
+    <h2>Hi h2</h2>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // $('button').click(function () {
+        //     $('h1').toggle(1000, function () {
+        //         console.log('toggle done.');
+        //         $('h2').toggle(2000)
+        //     })
+        // })
+
+        // fadeIn, fadeOut, fadeToggle
+        $('button').click(function () {
+            $('h1').fadeToggle(1000, function () {
+                console.log('toggle done.');
+                $('h2').toggle(2000)
+            })
+        })
+
+        // $(selector).hide(speed,callback); hide可以設定速度跟做完後要幹嘛 callback 做完後要打給我唷
+    </script>      
+</body>
+</html>

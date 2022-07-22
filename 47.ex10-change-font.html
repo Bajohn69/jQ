@@ -8,11 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <style>
-            .active{
-                background-color: #0062cc;
-            }
-            .fontS{
+    <style>
+        .active {
+            background-color: #0062cc;
+        }
+
+        /* .fontS{
                 font-size: 0.8rem;
             }
             .fontM{
@@ -20,8 +21,8 @@
             }
             .fontS{
                 font-size: 1.5rem;
-            }
-        </style>
+            } */
+    </style>
 </head>
 
 <body>
@@ -35,9 +36,15 @@
         </div>
         <div class="row">
             <h3>JQuery</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus, deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium nesciunt reprehenderit ducimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus,
+                deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium
+                nesciunt reprehenderit ducimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus,
+                deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium
+                nesciunt reprehenderit ducimus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id ad explicabo dolores delectus,
+                deserunt iste amet quo quam. Magnam dignissimos architecto sint mollitia distinctio illo, praesentium
+                nesciunt reprehenderit ducimus.</p>
         </div>
     </div>
 
@@ -45,8 +52,6 @@
     <script>
         var fontS = {
             fontSize: '0.8rem',
-            // backgroundColor: '#0062cc'
-
         }
         var fontM = {
             fontSize: '1rem'
@@ -55,16 +60,35 @@
             fontSize: '1.5rem'
         }
         $('#sm').click(function () {
-            $('p').css(fontS)
+            // $('p').css(fontS)
             console.log($('p').css(fontS));
+            // console.log()也會拿來執行
         })
         $('#md').click(function () {
-            $('p').css(fontM)
+            // $('p').css(fontM)
             console.log($('p').css(fontM));
         })
         $('#lg').click(function () {
-            $('p').css(fontL)
+            // $('p').css(fontL)
             console.log($('p').css(fontL));
+        })
+
+
+        // 老師的
+        $('.btn-group button').click(function () {
+            console.log('has class:', $(this).hasClass('btnS'));
+
+            $(this).addClass('active').siblings().removeClass('active')
+
+            if ($(this).hasClass('btnS')) {
+                $('p').removeClass('fontM fontL').addClass('fontS');
+            }
+            if ($(this).hasClass('btnM')) {
+                $('p').removeClass('fontS fontL').addClass('fontM');
+            }
+            if ($(this).hasClass('btnL')) {
+                $('p').removeClass('fontM fontS').addClass('fontL');
+            }
         })
     </script>
 </body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <button id="bounce" data-animate="bounce" data-anitime="3s">bounce me</button>
+    <button id="flash" data-animate="flash" data-anitime="2s">flash me</button>
+    <h1 class="animate__animated">bounce</h1>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // $('#bounce').click(function () {
+        //     console.log('bounce click');
+        //     $('h1').addClass('animate__bounce')
+        //     // 執行一次後移除 class
+
+        //     // animationend 可以監聽到動畫結束的時間點
+        //     $('h1').one('animationend',function () {
+        //         console.log('hi');
+        //         $('h1').removeClass('animate__bounce')
+        //     })
+        // })
+
+
+        // 彈性寫法
+        // $('button').click(function () {
+        //     console.log('bounce click',$(this).text());
+        //     const animationName = 'animate__' + $(this).text();
+
+        //     $('h1').addClass(animationName);
+
+        //     $('h1').one('animationend',function () {
+        //         console.log('hi');
+        //         $('h1').removeClass(animationName)
+        //     })
+        // })
+
+        // 如果按鈕不是叫做動畫名稱
+        // $('button').click(function () {
+        //     console.log('bounce click',$(this).text());
+        //     const animationName = 'animate__' + $(this).attr('id');
+
+        //     $('h1').addClass(animationName);
+
+        //     $('h1').one('animationend',function () {
+        //         console.log('hi');
+        //         $('h1').removeClass(animationName)
+        //     })
+        // })
+
+        // 如果不用 id
+        $('button').click(function () {
+            console.log('click',$(this).data('animate'));
+            console.log('click',$(this).data('anitime'));
+            const animationTime = 'animate__' + $(this).data('anitime');
+            const animationName = 'animate__' + $(this).data('animate');
+
+            $('h1').addClass(animationName);
+
+            $('h1').one('animationend',function () {
+                console.log('hi');
+                $('h1').removeClass(animationName)
+            })
+        })
+    </script>      
+</body>
+</html>

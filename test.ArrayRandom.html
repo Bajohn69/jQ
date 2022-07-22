@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <button>Click</button>
+    <h1 id="random"></h1>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        let randomNumber = ['牛肉麵','安安','炒飯','炒麵','酸辣湯','讚讚','ㄏㄏ','RRR','XD','水餃']
+
+        console.log(Math.random()*10);
+
+        $('button').click(function () {
+            // console.log(Math.round(Math.random()*10));
+            // console.log(randomNumber[Math.round(Math.random()*10)]);
+            const randomWord = randomNumber[Math.round(Math.random()*10)]
+            $('#random').text(randomWord)
+
+        })
+    </script>      
+</body>
+</html>

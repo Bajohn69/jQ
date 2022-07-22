@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <button>Click</button>
+    <div class="slide1">
+        <h1>slide1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam soluta iure non corrupti vitae, autem maxime repellat ipsam ipsum numquam consequuntur eos perspiciatis a voluptas dignissimos dolores optio fuga nisi.</p>
+    </div>
+    <div class="slide2">
+        <h1>slide2</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam soluta iure non corrupti vitae, autem maxime repellat ipsam ipsum numquam consequuntur eos perspiciatis a voluptas dignissimos dolores optio fuga nisi.</p>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // 收合 slide
+        $('button').click(function () {
+            $('.slide1').slideToggle()
+        })
+        // ●.slideDown()- 向下滑動元素
+        // ●.slideUp()- 向上滑動元素
+        // ●.slideToggle()- 切換 slideDown 與 slideUp
+
+    </script>      
+</body>
+</html>
